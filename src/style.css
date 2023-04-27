@@ -38,12 +38,13 @@ main {
 
   display: none;
 }
-.box:hover {
+.box:hover, .terminal-controls > p:hover {
   background-color: #a0a0a0;
   border-top: var(--border-shadow);
   border-left: var(--border-shadow);
   border-right: var(--border-light);
   border-bottom: var(--border-light);
+  cursor: pointer;
 }
 
 /* TERMINAL */
@@ -54,7 +55,7 @@ main {
   border-bottom: var(--border-shadow);
   border-left: var(--border-light);
   border-top: var(--border-light);
-  width: 600px;
+  width: 800px;
   margin: 0;
 }
 .terminal-header,
@@ -69,11 +70,12 @@ main {
   padding: 3px 5px;
 }
 .terminal-controls {
-  gap: 13px;
+  gap: 4px;
 }
 .terminal-title {
   color: #fffdfe;
   margin: 2px;
+  padding-left: 10px;
 }
 .terminal-controls > p {
   background-color: #b3b3b3;
@@ -85,4 +87,20 @@ main {
   text-align: center;
   font-weight: 700;
   margin: 0px;
+}
+.terminal-body {
+    height: 300px;
+    background-color: black;
+    border-right: var(--border-light);
+  border-bottom: var(--border-light);
+  border-left: var(--border-shadow);
+  border-top: var(--border-shadow);
+  margin-bottom: 3px;
+  margin-top: 6px;
+  color: #fffdfe;
+  padding: 8px 8px;
+  font-size: smaller;
+}
+.default-text {
+    margin: 0;
 }
