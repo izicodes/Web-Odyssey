@@ -38,7 +38,8 @@ main {
 
   display: none;
 }
-.box:hover, .terminal-controls > p:hover {
+.box:hover,
+.terminal-controls > p:hover {
   background-color: #a0a0a0;
   border-top: var(--border-shadow);
   border-left: var(--border-shadow);
@@ -76,6 +77,7 @@ main {
   color: #fffdfe;
   margin: 2px;
   padding-left: 10px;
+  font-size: 0.8rem;
 }
 .terminal-controls > p {
   background-color: #b3b3b3;
@@ -83,15 +85,16 @@ main {
   border-bottom: var(--border-shadow);
   border-left: var(--border-light);
   border-top: var(--border-light);
-  width: 30px;
+  width: 25px;
   text-align: center;
   font-weight: 700;
   margin: 0px;
+  font-size: 0.8rem;
 }
 .terminal-body {
-    height: 300px;
-    background-color: black;
-    border-right: var(--border-light);
+  height: 300px;
+  background-color: black;
+  border-right: var(--border-light);
   border-bottom: var(--border-light);
   border-left: var(--border-shadow);
   border-top: var(--border-shadow);
@@ -102,5 +105,38 @@ main {
   font-size: smaller;
 }
 .default-text {
-    margin: 0;
+  margin: 0;
+}
+.instructions {
+    color: #f9a5a5;
+}
+#terminal-input,
+#terminal-input:focus {
+  background-color: black;
+  border: none;
+  outline: none;
+  font-family: monospace;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  color: #F9F1A5;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+#terminal-input::before {
+  content: "|"; /* Use a vertical bar as the cursor */
+  color: #F9F1A5;
+  animation: blink 1s infinite; /* Make the cursor blink */
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  } /* Set the cursor to be invisible at the start */
+  50% {
+    opacity: 1;
+  } /* Set the cursor to be visible in the middle */
+  100% {
+    opacity: 0;
+  } /* Set the cursor to be invisible at the end */
 }
