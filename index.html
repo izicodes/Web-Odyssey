@@ -22,24 +22,30 @@
             </div>
           </div>
           <div class="terminal-body">
+
+            <!-- Intro text -->
             <p class="default-text">
               Windows PowerShell <br />
               Copyright (C) Microsoft Corporation. All rights reserved. <br /><br />
               <span class="instructions">&emsp;&emsp;1. To enter the webpage, please type 'cd .\Home\' + press enter <br/> 
-                &emsp;&emsp;2. Type 'start index.html' + enter again.</span> <br /><br />
+                &emsp;&emsp;2. Type 'start home.html' + enter again.</span> <br /><br />
             </p>
-            <div class="terminal-user-input-wrap">
+
+            <!-- cd input box -->
+            <div id="terminal-step1">
                 <label>PS C:\Users\Web-Odyssey></label>
-                <input type="text" name="terminal-input" id="cdInput" title="enter 'cd .\Home\'">
+                <input type="text" name="terminal-input" class="terminal-input" id="cdInput" title="enter 'cd .\Home\'">
             </div>
-            <div class="terminal-user-input-wrap">
+
+            <!-- start input box -->
+            <div id="terminal-step2">
                 <label>PS C:\Users\Web-Odyssey\Home></label>
-                <input type="text" name="terminal-input" id="startInput" title="enter 'start index.html'">
+                <input type="text" name="terminal-input" class="terminal-input" id="startInput" title="enter 'start home.html'">
             </div>
           </div>
         </div>
       </div>
     </main>
-    <script src=""></script>
+    <script src="src/scripts/main.js"></script>
   </body>
 </html>

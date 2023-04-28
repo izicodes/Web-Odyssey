@@ -110,15 +110,14 @@ main {
 .instructions {
     color: #f9a5a5;
 }
-#terminal-input,
-#terminal-input:focus {
+.terminal-input{
   background-color: black;
   border: none;
   outline: none;
   font-family: monospace;
   font-weight: 500;
   letter-spacing: 1.5px;
-  font-size: 14px;
+  font-size: 13px;
   color: #F9F1A5;
   width: 50%;
   padding: 0;
