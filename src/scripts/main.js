@@ -17,7 +17,7 @@ function terminalInputs() {
   // Show input box 2 when input box 1 is completed
   cdInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
-      if (cdInput.value === "cd .\\Home\\") {
+      if (cdInput.value === "cd .\\home\\") {
         ts2.style.display = "block";
         cdInput.disabled = true; // disable the cdInput input box
         startInput.focus(); // focus the next input box
@@ -28,7 +28,7 @@ function terminalInputs() {
   // Show the 'Well Done' text when input box 2 is completed
   startInput.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
-      if (startInput.value === "start home.html") {
+      if (startInput.value === "start .\\pages\\home.html") {
         startInput.disabled = true;
 
         // Create the new text

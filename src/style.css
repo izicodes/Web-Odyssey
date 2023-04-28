@@ -5,6 +5,10 @@
 :root {
   --border-shadow: 3px solid #696969;
   --border-light: 3px solid #fffdfe;
+
+  --pointer: url(http://www.rw-designer.com/cursor-extern.php?id=151727), auto;
+  --text: url(http://www.rw-designer.com/cursor-extern.php?id=155791), auto;
+  --click: url(http://www.rw-designer.com/cursor-extern.php?id=151740), auto;
 }
 
 body {
@@ -13,6 +17,7 @@ body {
   font-weight: 500;
   letter-spacing: 1.5px;
   font-size: 16px;
+  cursor: var(--pointer);
 }
 
 main {
@@ -45,7 +50,7 @@ main {
   border-left: var(--border-shadow);
   border-right: var(--border-light);
   border-bottom: var(--border-light);
-  cursor: pointer;
+  cursor: var(--click);
 }
 
 /* TERMINAL */
@@ -108,9 +113,9 @@ main {
   margin: 0;
 }
 .instructions {
-    color: #f9a5a5;
+  color: #f9a5a5;
 }
-.terminal-input{
+.terminal-input {
   background-color: black;
   border: none;
   outline: none;
@@ -118,14 +123,13 @@ main {
   font-weight: 500;
   letter-spacing: 1.5px;
   font-size: 13px;
-  color: #F9F1A5;
+  color: #f9f1a5;
   width: 50%;
-  padding: 0;
-  margin: 0;
+  cursor: var(--text);
 }
 #terminal-input::before {
   content: "|"; /* Use a vertical bar as the cursor */
-  color: #F9F1A5;
+  color: #f9f1a5;
   animation: blink 1s infinite; /* Make the cursor blink */
 }
 @keyframes blink {
