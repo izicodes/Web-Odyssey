@@ -1,10 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 :root {
-  --border-shadow: 3px solid #696969;
-  --border-light: 3px solid #fffdfe;
+  --border-shadow: 3px solid #808080;
+  --border-light: 3px solid #e3e3e3;
+
+  --border-tshadow: 2px solid #808080;
+  --border-tlight: 2px solid #e3e3e3;
 
   --pointer: url(http://www.rw-designer.com/cursor-extern.php?id=151727), auto;
   --text: url(http://www.rw-designer.com/cursor-extern.php?id=155791), auto;
@@ -20,6 +25,90 @@ body {
   cursor: var(--pointer);
 }
 
+label {
+  cursor: var(--pointer);
+}
+
+.hide {
+  display: none;
+}
+
+/* UNIVERSAL */
+.nborder {
+  background-color: #b3b3b3;
+  border-right: var(--border-shadow);
+  border-bottom: var(--border-shadow);
+  border-left: var(--border-light);
+  border-top: var(--border-light);
+  margin: 0;
+}
+.nthinborder {
+  background-color: #b3b3b3;
+  border-right: var(--border-tshadow);
+  border-bottom: var(--border-tshadow);
+  border-left: var(--border-tlight);
+  border-top: var(--border-tlight);
+  margin: 0;
+}
+.nb-shadow:hover {
+  background-color: #a0a0a0;
+  border-top: var(--border-shadow);
+  border-left: var(--border-shadow);
+  border-right: var(--border-light);
+  border-bottom: var(--border-light);
+  cursor: var(--click);
+}
+.nbthin-shadow:hover {
+  background-color: #a0a0a0;
+  border-top: var(--border-tshadow);
+  border-left: var(--border-tshadow);
+  border-right: var(--border-tlight);
+  border-bottom: var(--border-tlight);
+  cursor: var(--click);
+}
+.controls-wrap {
+  display: flex;
+  gap: 5px;
+}
+.controls {
+  width: 23px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0px;
+  font-size: 0.8rem;
+}
+.gui-wrapper {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.gui-header {
+  background-color: #00027f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 3px;
+  margin: 0;
+}
+.gui-htitle {
+  color: #f9f7fe;
+  margin: 0;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+.gui-btn {
+  width: 100px;
+  border-radius: 0px;
+  padding: 2px 2px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-family: monospace;
+}
+.gui-btn:hover {
+  box-shadow: 0 0 0 2px #575757;
+}
+
 main {
   height: 100vh;
 }
@@ -31,6 +120,49 @@ main {
   align-items: center;
 }
 
+/* LOGIN COMPONENT */
+#login-gui {
+  width: 560px;
+}
+.login-body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 20% 55% 25%;
+  justify-items: center;
+  margin: 1rem 0;
+}
+.login-main {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login-main > p {
+  text-align: justify;
+  margin: 0;
+}
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#username-input,
+#password-input {
+  width: 70%;
+  background-color: #f9f7fe;
+  outline: invert;
+  outline: none;
+  font-family: monospace;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+}
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* BOX STYLING */
 .box {
   background-color: #b3b3b3;
@@ -40,8 +172,6 @@ main {
   border-bottom: var(--border-shadow);
   border-left: var(--border-light);
   border-top: var(--border-light);
-
-  display: none;
 }
 .box:hover,
 .terminal-controls > p:hover {
@@ -126,20 +256,4 @@ main {
   color: #f9f1a5;
   width: 50%;
   cursor: var(--text);
-}
-#terminal-input::before {
-  content: "|"; /* Use a vertical bar as the cursor */
-  color: #f9f1a5;
-  animation: blink 1s infinite; /* Make the cursor blink */
-}
-@keyframes blink {
-  0% {
-    opacity: 0;
-  } /* Set the cursor to be invisible at the start */
-  50% {
-    opacity: 1;
-  } /* Set the cursor to be visible in the middle */
-  100% {
-    opacity: 0;
-  } /* Set the cursor to be invisible at the end */
 }

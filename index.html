@@ -10,9 +10,9 @@
   <body>
     <main>
       <div class="wrapper">
-        <div class="box">Welcome to the Web Odyssey!</div>
+        <div class="box hide">Welcome to the Web Odyssey!</div>
 
-        <div class="terminal">
+        <div class="terminal hide">
           <div class="terminal-header">
             <p class="terminal-title">Windows PowerShell</p>
             <div class="terminal-controls">
@@ -22,25 +22,92 @@
             </div>
           </div>
           <div class="terminal-body">
-
             <!-- Intro text -->
             <p class="default-text">
               Windows PowerShell <br />
-              Copyright (C) Microsoft Corporation. All rights reserved. <br /><br />
-              <span class="instructions">&emsp;&emsp;1. To enter the webpage, please type 'cd .\home\' + press enter <br/> 
-                &emsp;&emsp;2. Type 'start .\pages\home.html' + enter again.</span> <br /><br />
+              Copyright (C) Microsoft Corporation. All rights reserved.
+              <br /><br />
+              <span class="instructions"
+                >&emsp;&emsp;1. To enter the webpage, please type 'cd .\home\' +
+                press enter <br />
+                &emsp;&emsp;2. Type 'start .\pages\home.html' + enter
+                again.</span
+              >
+              <br /><br />
             </p>
 
             <!-- cd input box -->
             <div id="terminal-step1">
-                <label>PS C:\Users\Web-Odyssey></label>
-                <input type="text" name="terminal-input" class="terminal-input" id="cdInput" title="enter 'cd .\home\'">
+              <label>PS C:\Users\Web-Odyssey></label>
+              <input
+                type="text"
+                name="terminal-input"
+                class="terminal-input"
+                id="cdInput"
+                title="enter 'cd .\home\'"
+              />
             </div>
 
             <!-- start input box -->
             <div id="terminal-step2">
-                <label>PS C:\Users\Web-Odyssey\Home></label>
-                <input type="text" name="terminal-input" class="terminal-input" id="startInput" title="enter 'start .\pages\home.html'">
+              <label>PS C:\Users\Web-Odyssey\Home></label>
+              <input
+                type="text"
+                name="terminal-input"
+                class="terminal-input"
+                id="startInput"
+                title="enter 'start .\pages\home.html'"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="gui-wrapper nborder" id="login-gui">
+          <div class="gui-header">
+            <h3 class="gui-htitle">Enter Windows Password</h3>
+            <div class="controls-wrap">
+              <p class="nthinborder nbthin-shadow controls">?</p>
+              <p class="nthinborder nbthin-shadow controls">✕</p>
+            </div>
+          </div>
+          <div class="login-body">
+            <div>
+              <img src="src/images/computer-2000.ico" alt="computer icon" />
+            </div>
+            <div class="login-main">
+              <p>
+                Type a name to identify yourself to Windows, then enter the
+                password.
+              </p>
+              <p>
+                Tip: The username is 'Web Odyssey' and the password is
+                'password123'.
+              </p>
+              <div class="login-inputs">
+                <section id="login-username">
+                  <label for="username-input"><u>U</u>sername:</label>
+                  <input
+                    type="text"
+                    name="username-input"
+                    id="username-input"
+                    title="Enter the username."
+                    class=""
+                  />
+                </section>
+                <section id="login-password">
+                  <label for="password-input"><u>P</u>assword:</label>
+                  <input
+                    type="text"
+                    name="password-input"
+                    id="password-input"
+                    title="Enter the password."
+                  />
+                </section>
+              </div>
+            </div>
+            <div class="login-buttons">
+              <button type="button" class="nthinborder nbthin-shadow gui-btn">OK</button>
+              <button type="button" class="nthinborder nbthin-shadow gui-btn">Cancel</button>
             </div>
           </div>
         </div>
