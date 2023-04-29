@@ -1,0 +1,25 @@
+body {
+  background-color: #000;
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-screen {
+  height: 100vh;
+  background-color: #6c9ebb;
+  width: 80%;
+  position: relative; 
+}
+
+/* TASKBAR */
+.taskbar {
+  position: absolute;
+  background-color: #C0C0C0;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+  height: 50px
+}

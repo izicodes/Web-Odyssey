@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="shortcut icon" href="src/images/logo-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/stylesheets/root.css" />
+    <link rel="stylesheet" href="src/stylesheets/login.css" />
     <title>Enter | Web Odyssey</title>
   </head>
   <body>
@@ -90,29 +92,42 @@
                     type="text"
                     name="username-input"
                     id="username-input"
-                    title="Enter the username."
-                    class=""
+                    title="Enter the username"
+                    autocomplete="off"
                   />
                 </section>
                 <section id="login-password">
                   <label for="password-input"><u>P</u>assword:</label>
                   <input
-                    type="text"
+                    type="password"
                     name="password-input"
                     id="password-input"
-                    title="Enter the password."
+                    title="Enter the password"
+                    autocomplete="off"
                   />
                 </section>
               </div>
             </div>
             <div class="login-buttons">
-              <button type="button" class="nthinborder nbthin-shadow gui-btn">OK</button>
-              <button type="button" class="nthinborder nbthin-shadow gui-btn">Cancel</button>
+              <button
+                type="button"
+                class="nthinborder nbthin-shadow gui-btn"
+                id="okBtn"
+              >
+                OK
+              </button>
+              <button
+                type="button"
+                class="nthinborder nbthin-shadow gui-btn"
+                id="cancelBtn"
+              >
+                Cancel
+              </button>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <script src="src/scripts/main.js"></script>
+    <script src="src/scripts/login-page.js"></script>
   </body>
 </html>

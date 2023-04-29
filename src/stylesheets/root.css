@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-shadow: 3px solid #808080;
+  --border-light: 3px solid #e3e3e3;
+
+  --border-tshadow: 2px solid #808080;
+  --border-tlight: 2px solid #e3e3e3;
+
+  --pointer: url(http://www.rw-designer.com/cursor-extern.php?id=151727), auto;
+  --text: url(http://www.rw-designer.com/cursor-extern.php?id=155791), auto;
+  --click: url(http://www.rw-designer.com/cursor-extern.php?id=151740), auto;
+}
+
+body {
+  font-family: monospace;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  cursor: var(--pointer);
+  margin: 0;
+}
+
+label {
+  cursor: var(--pointer);
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+  cursor: var(--text);
+}
+
+.hide {
+  display: none;
+}
+
+/* UNIVERSAL */
+.nborder {
+  background-color: #b3b3b3;
+  border-right: var(--border-shadow);
+  border-bottom: var(--border-shadow);
+  border-left: var(--border-light);
+  border-top: var(--border-light);
+  margin: 0;
+}
+.nthinborder {
+  background-color: #b3b3b3;
+  border-right: var(--border-tshadow);
+  border-bottom: var(--border-tshadow);
+  border-left: var(--border-tlight);
+  border-top: var(--border-tlight);
+  margin: 0;
+}
+.nb-shadow:hover {
+  background-color: #a0a0a0;
+  border-top: var(--border-shadow);
+  border-left: var(--border-shadow);
+  border-right: var(--border-light);
+  border-bottom: var(--border-light);
+  cursor: var(--click);
+}
+.nbthin-shadow:hover {
+  background-color: #a0a0a0;
+  border-top: var(--border-tshadow);
+  border-left: var(--border-tshadow);
+  border-right: var(--border-tlight);
+  border-bottom: var(--border-tlight);
+  cursor: var(--click);
+}
+.controls-wrap {
+  display: flex;
+  gap: 5px;
+}
+.controls {
+  width: 23px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0px;
+  font-size: 0.8rem;
+}
+.gui-wrapper {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.gui-header {
+  background-color: #00027f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 3px;
+  margin: 0;
+}
+.gui-htitle {
+  color: #f9f7fe;
+  margin: 0;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+.gui-btn {
+  width: 100px;
+  border-radius: 0px;
+  padding: 2px 2px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-family: monospace;
+}
+.gui-btn:hover {
+  box-shadow: 0 0 0 2px #575757;
+}
