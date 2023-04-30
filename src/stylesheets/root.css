@@ -14,6 +14,7 @@
   --pointer: url(http://www.rw-designer.com/cursor-extern.php?id=151727), auto;
   --text: url(http://www.rw-designer.com/cursor-extern.php?id=155791), auto;
   --click: url(http://www.rw-designer.com/cursor-extern.php?id=151740), auto;
+  --error: url(http://www.rw-designer.com/cursor-extern.php?id=151735), auto;
 }
 
 body {
@@ -129,7 +130,9 @@ input[type="password"]:hover {
   font-family: monospace;
 }
 .gui-btn:hover,
-.gui-btn:focus {
-  box-shadow: 0 0 0 2px #575757;
+.gui-btn:focus,
+.gui-btn:active {
+  outline: none;
+  box-shadow: 0 0 0 1px #575757;
   cursor: var(--click);
 }

@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="src/images/logo-icon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="src/images/logo-icon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="src/stylesheets/root.css" />
     <link rel="stylesheet" href="src/stylesheets/login.css" />
     <title>Login | Web Odyssey</title>
@@ -12,59 +16,7 @@
   <body>
     <main>
       <div class="wrapper">
-        <div class="box hide">Welcome to the Web Odyssey!</div>
-
-        <div class="terminal hide">
-          <div class="terminal-header">
-            <p class="terminal-title">Windows PowerShell</p>
-            <div class="terminal-controls">
-              <p>_</p>
-              <p>☐</p>
-              <p>✕</p>
-            </div>
-          </div>
-          <div class="terminal-body">
-            <!-- Intro text -->
-            <p class="default-text">
-              Windows PowerShell <br />
-              Copyright (C) Microsoft Corporation. All rights reserved.
-              <br /><br />
-              <span class="instructions"
-                >&emsp;&emsp;1. To enter the webpage, please type 'cd .\home\' +
-                press enter <br />
-                &emsp;&emsp;2. Type 'start .\pages\home.html' + enter
-                again.</span
-              >
-              <br /><br />
-            </p>
-
-            <!-- cd input box -->
-            <div id="terminal-step1">
-              <label>PS C:\Users\Web-Odyssey></label>
-              <input
-                type="text"
-                name="terminal-input"
-                class="terminal-input"
-                id="cdInput"
-                title="enter 'cd .\home\'"
-              />
-            </div>
-
-            <!-- start input box -->
-            <div id="terminal-step2">
-              <label>PS C:\Users\Web-Odyssey\Home></label>
-              <input
-                type="text"
-                name="terminal-input"
-                class="terminal-input"
-                id="startInput"
-                title="enter 'start .\pages\home.html'"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="gui-wrapper nborder" id="login-gui">
+        <div class="gui-wrapper nborder " id="login-gui">
           <div class="gui-header">
             <h3 class="gui-htitle">Welcome to Windows</h3>
             <div class="controls-wrap">
@@ -77,13 +29,7 @@
               <img src="src/images/computer-2000.ico" alt="computer icon" />
             </div>
             <div class="login-main">
-              <p>
-                Type a username and password to log on to Windows.
-              </p>
-              <p>
-                Tip: The username is 'Web Odyssey' and the password is
-                'password123'.
-              </p>
+              <p>Type a username and password to log on to Windows.</p>
               <div class="login-inputs">
                 <section id="login-username">
                   <label for="username-input"><u>U</u>sername:</label>
@@ -122,9 +68,38 @@
               >
                 Cancel
               </button>
+              <button
+                type="button"
+                class="nthinborder nbthin-shadow gui-btn"
+                id="tipBtn"
+              >
+                Tip
+              </button>
             </div>
           </div>
         </div>
+
+        <!-- <div id="tipsPopUp" class="gui-wrapper nborder">
+          <div class="gui-header">
+            <h3 class="gui-htitle">Windows Tips</h3>
+            <div class="controls-wrap">
+              <p class="nthinborder controls" id="tipsXControl">✕</p>
+            </div>
+          </div>
+          <div class="tipsPopUp-body flexcolcc">
+            <p>
+              Tip: The username is 'Web Odyssey' and the password is
+              'password123'.
+            </p>
+            <button
+              type="button"
+              class="nthinborder nbthin-shadow gui-btn"
+              id="tipOKBtn"
+            >
+              OK
+            </button>
+          </div>
+        </div> -->
       </div>
     </main>
     <script src="src/scripts/login-page.js"></script>
