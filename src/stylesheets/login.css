@@ -42,7 +42,8 @@ main {
 }
 #username-input,
 #password-input {
-  width: 70%;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: #f9f7fe;
   outline: invert;
   outline: none;
@@ -56,6 +57,15 @@ main {
   flex-direction: column;
   gap: 10px;
 }
+.login-buttons > button {
+  width: 100px;
+  padding: 2px 2px;
+}
+
+
+
+
+
 
 /* BOX STYLING */
 .box {

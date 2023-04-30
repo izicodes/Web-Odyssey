@@ -19,7 +19,6 @@
 body {
   font-family: monospace;
   font-weight: 500;
-  letter-spacing: 1.5px;
   font-size: 16px;
   cursor: var(--pointer);
   margin: 0;
@@ -38,9 +37,22 @@ input[type="password"]:hover {
   display: none;
 }
 
+.flexcolcc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flexrowcc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 /* UNIVERSAL */
 .nborder {
-  background-color: #b3b3b3;
+  background-color: #c0c0c0;
   border-right: var(--border-shadow);
   border-bottom: var(--border-shadow);
   border-left: var(--border-light);
@@ -48,7 +60,7 @@ input[type="password"]:hover {
   margin: 0;
 }
 .nthinborder {
-  background-color: #b3b3b3;
+  background-color: #c0c0c0;
   border-right: var(--border-tshadow);
   border-bottom: var(--border-tshadow);
   border-left: var(--border-tlight);
@@ -56,7 +68,7 @@ input[type="password"]:hover {
   margin: 0;
 }
 .nb-shadow:hover {
-  background-color: #a0a0a0;
+  background-color: #b1b1b1;
   border-top: var(--border-shadow);
   border-left: var(--border-shadow);
   border-right: var(--border-light);
@@ -64,12 +76,20 @@ input[type="password"]:hover {
   cursor: var(--click);
 }
 .nbthin-shadow:hover {
-  background-color: #a0a0a0;
+  background-color: #b1b1b1;
   border-top: var(--border-tshadow);
   border-left: var(--border-tshadow);
   border-right: var(--border-tlight);
   border-bottom: var(--border-tlight);
   cursor: var(--click);
+}
+.ivborder {
+  background-color: #b3b3b3;
+  border-top: var(--border-shadow);
+  border-left: var(--border-shadow);
+  border-right: var(--border-light);
+  border-bottom: var(--border-light);
+  margin: 0;
 }
 .controls-wrap {
   display: flex;
@@ -101,15 +121,15 @@ input[type="password"]:hover {
   margin-left: 5px;
 }
 .gui-btn {
-  width: 100px;
   border-radius: 0px;
-  padding: 2px 2px;
   text-align: center;
   display: inline-block;
   vertical-align: middle;
   line-height: 1.5;
   font-family: monospace;
 }
-.gui-btn:hover {
+.gui-btn:hover,
+.gui-btn:focus {
   box-shadow: 0 0 0 2px #575757;
+  cursor: var(--click);
 }

@@ -14,10 +14,34 @@
     <title>Homescreen | Web Odyssey</title>
   </head>
   <body>
-    <main>
-        <div class="main-screen">
-            <div class="taskbar">taskbar area</div>
+    <main class="hide">
+      <div class="main-screen">
+        <div class="taskbar">
+          <button id="startBtn" class="nborder nb-shadow gui-btn">
+            <img
+              id="startIcon"
+              src="../src/images/start-icon.png"
+              alt="windows start button icon"
+            />
+            Start
+          </button>
+          <div id="timeBox" class="ivborder">1:50 PM</div>
         </div>
+      </div>
     </main>
+
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen" class="flexcolcc">
+      <div class="flexcolcc">
+        <img
+        id="loadingImage"
+        src="../src/images/login-loading.png"
+        alt="Windows 95 loading screen"
+      />
+      <div id="loading-track">
+      </div>
+      </div>
+    </div>
+    <script src="../src/scripts/loading-screen.js"></script>
   </body>
 </html>

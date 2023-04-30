@@ -11,15 +11,97 @@ main {
   height: 100vh;
   background-color: #6c9ebb;
   width: 80%;
-  position: relative; 
+  position: relative;
+}
+
+/* LOADING SCREEN */
+#loading-screen {
+  height: 100vh;
+}
+#loading-screen > div {
+  height: 100vh;
+  width: 80%;
+}
+#loadingImage {
+  width: 100%;
+}
+#loading-track {
+  background-color: #c0c0c0;
+  height: 35px;
+  width: 100%;
+  background: linear-gradient(to right, #5082bd 0%, #b0bac3 50%, #5082bd 100%);
+  background-size: 400% 400%;
+
+  -webkit-animation: loadingGradient 3s ease-in-out infinite;
+  -moz-animation: loadingGradient 3s ease-in-out infinite;
+  animation: loadingGradient 3s ease-in-out infinite;
+}
+@-webkit-keyframes loadingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes loadingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes loadingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50% 0%;
+  }
 }
 
 /* TASKBAR */
 .taskbar {
   position: absolute;
-  background-color: #C0C0C0;
+  background-color: #c0c0c0;
   width: 100%;
   bottom: 0px;
   left: 0;
-  height: 50px
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+}
+
+#startBtn {
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  gap: 5px;
+  padding: 0 4px;
+  outline: none;
+  font-size: 15px;
+}
+#startIcon {
+  width: 23px;
+}
+#timeBox {
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6px;
 }
