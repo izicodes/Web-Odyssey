@@ -1,0 +1,41 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #login-gui {
+    margin: 0 10px;
+  }
+  .login-buttons > button {
+    width: 60px !important;
+    color: black;
+  }
+
+  #username-input,
+  #password-input {
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: #f9f7fe;
+    outline: invert;
+    outline: none;
+    font-family: monospace;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
