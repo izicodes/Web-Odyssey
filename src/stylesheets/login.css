@@ -66,6 +66,7 @@ main {
 /* Tips Pop Up */
 #tipsPopUp {
   position: absolute;
+  display: none;
 }
 .tipsPopUp-body {
   width: 300px;
